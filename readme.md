@@ -4,7 +4,7 @@
 
 ![Banner](Docs/banner.png)
 <br>
-:construction: Status of project :construction:
+:construction: IN CONSTRUCTION :construction:
 <br><br>
 This repository contains my practice project for connecting to MariaDB using PHP and implementing a CRUD (Create, Read, Update, Delete) application following Clean Architecture principles, specifically Domain-Driven Design (DDD).
 
