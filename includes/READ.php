@@ -12,7 +12,7 @@ if (isset($_GET['q'])) {
 
     echo $_GET['q'];
 
-    //require_once '../controllers/ExampleController.php';
+    require_once __DIR__ . '/../controllers/ExampleController.php';
     //$exampleController = new ExampleController();
     //$example = $exampleController->getExampleById((int)$_GET['id']);
 
