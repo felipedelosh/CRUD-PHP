@@ -95,4 +95,14 @@ class ExampleRepository {
             return null; 
         }
     }
+
+    public function updateExample($id, $name, $description) {
+        $query = "UPDATE examples SET NAME = :name, DESCRIPTION = :description WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':description', $description);
+        $stmt->execute();
+    }
+    
 }

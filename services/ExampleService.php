@@ -51,6 +51,10 @@ class ExampleService {
         return $this->repository->createNewExample($name, $description);
     }
 
+    public function updateExample($id, $name, $description){
+        $this->repository->updateExample($id, $name, $description);
+    }
+
     private function isExampleInArrayById($arr, $id){
         foreach ($arr as $example) {
              if ($example->id == $id) {

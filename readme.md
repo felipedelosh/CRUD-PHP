@@ -19,6 +19,7 @@ This repository contains my practice project for connecting to MariaDB using PHP
 
 ```
 /project-root
+|-- assets/
 |-- config/
 |-- controllers/
 |-- includes/

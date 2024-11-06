@@ -30,5 +30,9 @@ class ExampleController {
     public function createNewExample($name, $description){
         return $this->service->createNewExample($name, $description);
     }
+
+    public function updateExample($id, $name, $description){
+        $this->service->updateExample($id, $name, $description);
+    }
     
 }
