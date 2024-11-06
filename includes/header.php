@@ -22,6 +22,10 @@
         .right-item {
             font-size: 18px;
         }
+
+        .left-item#home-link { 
+            cursor: pointer; 
+        }
     </style>
     <script src="js/main.js"></script>
 </head>
