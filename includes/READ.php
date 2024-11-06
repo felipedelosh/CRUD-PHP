@@ -3,27 +3,28 @@
 <h1>READ</h1>
 
 <form method="GET" action="READ.php">
-    <input type="text" name="q" placeholder="Buscar por ID" required>
+    <input type="text" name="q" placeholder="Buscar por ID/NAME/DESCRIPTION" required>
     <button type="submit">Buscar</button>
 </form>
 
 <?php
 if (isset($_GET['q'])) {
-
-    echo $_GET['q'];
-
     require_once __DIR__ . '/../controllers/ExampleController.php';
-    //$exampleController = new ExampleController();
-    //$example = $exampleController->getExampleById((int)$_GET['id']);
+    $exampleController = new ExampleController();
+    $examples = $exampleController->getExampleByQuery($_GET['q']);
 
-    // if ($example) {
-    //     echo '<h2>Resultado de la Búsqueda:</h2>';
-    //     echo '<p>ID: ' . $example->id . '</p>';
-    //     echo '<p>Nombre: ' . $example->name . '</p>';
-    //     echo '<p>Descripción: ' . $example->description . '</p>';
-    // } else {
-    //     echo '<p>No se encontró un Example con ese ID.</p>';
-    // }
+    if ($examples) {
+        echo '<br>';
+        echo 'TOTAL FOUND: ' . count($examples).'<br>';
+        for ($i = 0; $i < count($examples); $i++) { 
+            $example = $examples[$i];
+
+            echo 'Product ID:'. $example->id . '<br>';
+            
+        }
+    } else {
+        echo '<p>Not found data.</p>';
+    }
 }
 ?>
 

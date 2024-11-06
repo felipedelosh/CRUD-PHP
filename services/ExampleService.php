@@ -12,4 +12,17 @@ class ExampleService {
     public function getAllExamples() {
         return $this->repository->getAll();
     }
+
+    public function getExampleByQuery($q) {
+        $data = []; 
+
+        $example = $this->repository->getById($q);
+
+        if ($example != null){
+            $data[] = $example;
+        }
+
+        return $data;
+    }
+
 }

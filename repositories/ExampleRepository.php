@@ -22,4 +22,21 @@ class ExampleRepository {
 
         return $examples;
     }
+
+
+    public function getById($id) {
+        $query = "SELECT id, NAME, DESCRIPTION FROM examples where id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+
+        if ($row) {
+            return new Example($row['id'], $row['NAME'], $row['DESCRIPTION']); 
+        } else { 
+            return null; 
+        }
+    }
 }
