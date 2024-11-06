@@ -30,7 +30,7 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-<header>
-    <div class="left-item" id="home-link">PHP CRUD PDO</div>
-    <div class="right-item">felipedelosh</div>
-</header>
+    <header>
+        <div class="left-item" id="home-link">PHP CRUD PDO</div>
+        <div class="right-item">felipedelosh</div>
+    </header>
