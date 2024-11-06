@@ -5,7 +5,7 @@
 ![Banner](Docs/banner.png)
 :construction: Status of project :construction:
 <br><br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This repository contains my practice project for connecting to MariaDB using PHP and implementing a CRUD (Create, Read, Update, Delete) application following Clean Architecture principles, specifically Domain-Driven Design (DDD).
 
 ## :hammer:Funtions:
 
@@ -17,7 +17,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## :play_or_pause_button:How to execute a project
 
-Double click
+Install XAMPP createe a database with Docs/sql.sql (remember update you DB credentianls in config/env.php)
 
 ## :hammer_and_wrench:Tech.
 
@@ -25,7 +25,7 @@ Double click
 
 ## :warning:Warning.
 
-- limitations.
+- you need create a database and update credentials
 
 ## Autor
 
