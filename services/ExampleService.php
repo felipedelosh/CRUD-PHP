@@ -1,6 +1,6 @@
 <?php
 
-require_once 'repositories/ExampleRepository.php';
+require_once __DIR__ . '/../repositories/ExampleRepository.php';
 
 class ExampleService {
     private $repository;

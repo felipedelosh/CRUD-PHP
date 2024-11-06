@@ -1,6 +1,6 @@
 <?php
 
-require_once 'models/Example.php';
+require_once __DIR__ . '/../models/Example.php';
 
 class ExampleRepository {
     private $conn;
