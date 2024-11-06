@@ -33,6 +33,8 @@ This repository contains my practice project for connecting to MariaDB using PHP
 |-- index.php
 ```
 
+![Layer architecture](Docs/arq.png)
+
 ## :play_or_pause_button:How to execute a project
 
 Install XAMPP createe a database with Docs/sql.sql (remember update you DB credentianls in config/env.php)
