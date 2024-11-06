@@ -55,6 +55,10 @@ class ExampleService {
         $this->repository->updateExample($id, $name, $description);
     }
 
+    public function deleteExample($id){
+        $this->repository->deleteExample($id);
+    }
+
     private function isExampleInArrayById($arr, $id){
         foreach ($arr as $example) {
              if ($example->id == $id) {

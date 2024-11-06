@@ -34,5 +34,9 @@ class ExampleController {
     public function updateExample($id, $name, $description){
         $this->service->updateExample($id, $name, $description);
     }
+
+    public function deleteExample($id){
+        $this->service->deleteExample($id);
+    }
     
 }
