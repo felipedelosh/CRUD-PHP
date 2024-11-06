@@ -9,6 +9,31 @@ class ExampleRepository {
         $this->conn = $db;
     }
 
+    public function getNextId() {
+        $query = "SELECT COUNT(*) + 1 AS next_id FROM examples";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $row['next_id'];
+    }
+
+    public function createNewExample($name, $description){
+        $id = $this->getNextId();
+        
+        $query = "INSERT INTO examples (id, NAME, DESCRIPTION) VALUES (:id, :name, :description)";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':description', $description);
+        
+        if ($stmt->execute()) {
+            return $id;
+        } else {
+            return -1;
+        }
+    }
+
     public function getAll() {
         $query = "SELECT id, NAME, DESCRIPTION FROM examples";
         $stmt = $this->conn->prepare($query);

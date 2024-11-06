@@ -26,5 +26,9 @@ class ExampleController {
     public function getExampleByQuery($q) {
         return $this->service->getExampleByQuery($q);
     }
+
+    public function createNewExample($name, $description){
+        return $this->service->createNewExample($name, $description);
+    }
     
 }

@@ -13,6 +13,10 @@ class ExampleService {
         return $this->repository->getAll();
     }
 
+    public function getNextId() {
+        return $this->repository->getNextId();
+    }
+
     public function getExampleByQuery($q) {
         $data = []; 
 
@@ -41,6 +45,10 @@ class ExampleService {
         }
 
         return $data;
+    }
+
+    public function createNewExample($name, $description){
+        return $this->repository->createNewExample($name, $description);
     }
 
     private function isExampleInArrayById($arr, $id){
