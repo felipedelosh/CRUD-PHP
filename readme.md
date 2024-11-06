@@ -14,6 +14,23 @@ This repository contains my practice project for connecting to MariaDB using PHP
 - `Function 3`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
 - `Function 4`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
 
+## Architecture (Layer)
+
+```
+/project-root
+|-- config/
+|-- controllers/
+|-- includes/
+|   |-- header.php
+|   |-- footer.php
+|   |-- TEMPLATES.php
+|-- js/
+|   |-- scripts.js
+|-- models/
+|-- repositories/
+|-- services/
+|-- index.php
+```
 
 ## :play_or_pause_button:How to execute a project
 
