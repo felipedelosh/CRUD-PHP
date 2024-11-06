@@ -26,4 +26,5 @@ class ExampleController {
     public function getExampleByQuery($q) {
         return $this->service->getExampleByQuery($q);
     }
+    
 }

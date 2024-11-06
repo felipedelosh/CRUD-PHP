@@ -16,11 +16,15 @@ if (isset($_GET['q'])) {
     if ($examples) {
         echo '<br>';
         echo 'TOTAL FOUND: ' . count($examples).'<br>';
+        echo '<br>';
         for ($i = 0; $i < count($examples); $i++) { 
             $example = $examples[$i];
 
             echo 'Product ID:'. $example->id . '<br>';
-            
+            echo  $example->name . '<br>';
+            echo  $example->description . '<br>';
+            echo  '<br>';
+
         }
     } else {
         echo '<p>Not found data.</p>';

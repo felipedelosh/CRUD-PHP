@@ -22,6 +22,22 @@ class ExampleService {
             $data[] = $example;
         }
 
+        $example = $this->repository->getByLikeName($q);
+
+        if($example != null){
+            for ($i = 0; $i < count($example); $i++) { 
+                $data[] = $example[$i]; 
+            }
+        }
+
+        $example = $this->repository->getByLikeDescription($q);
+
+        if($example != null){
+            for ($i = 0; $i < count($example); $i++) { 
+                $data[] = $example[$i]; 
+            }
+        }
+
         return $data;
     }
 

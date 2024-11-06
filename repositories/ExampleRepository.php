@@ -23,7 +23,38 @@ class ExampleRepository {
         return $examples;
     }
 
+    public function getByLikeName($q) {
+        $query = "SELECT id, NAME, DESCRIPTION FROM examples WHERE NAME LIKE :q";
+        $stmt = $this->conn->prepare($query);
+        $likeQuery = '%' . $q . '%';
+        $stmt->bindParam(':q', $likeQuery);
+        $stmt->execute();
+    
+        $examples = [];
+    
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $examples[] = new Example($row['id'], $row['NAME'], $row['DESCRIPTION']);
+        }
+    
+        return $examples;
+    }
 
+    public function getByLikeDescription($q) {
+        $query = "SELECT id, NAME, DESCRIPTION FROM examples WHERE DESCRIPTION LIKE :q";
+        $stmt = $this->conn->prepare($query);
+        $likeQuery = '%' . $q . '%';
+        $stmt->bindParam(':q', $likeQuery);
+        $stmt->execute();
+    
+        $examples = [];
+    
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $examples[] = new Example($row['id'], $row['NAME'], $row['DESCRIPTION']);
+        }
+    
+        return $examples;
+    }
+    
     public function getById($id) {
         $query = "SELECT id, NAME, DESCRIPTION FROM examples where id = :id";
         $stmt = $this->conn->prepare($query);
