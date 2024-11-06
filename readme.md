@@ -9,10 +9,10 @@ This repository contains my practice project for connecting to MariaDB using PHP
 
 ## :hammer:Funtions:
 
-- `Function 1`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
-- `Function 2`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
-- `Function 3`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
-- `Function 4`: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.<br>
+- `Function 1`: C: create new Examples entities and insert in database.<br>
+- `Function 2`: R: read a query with $q = id or name or word in description and return the macth examples.<br>
+- `Function 3`: U: update a example and save in database.<br>
+- `Function 4`: D: delete example in database<br>
 
 ## Architecture (Layer)
 
